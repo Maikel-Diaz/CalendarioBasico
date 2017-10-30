@@ -11,26 +11,41 @@ public class CalendarioBasico
     private int day;
     private int month;
     private int year;
-    
+
     /**
      * Constructor for objects of class CalendarioBasico
      */
     public CalendarioBasico()
     {
+        day = 0;
+        month = 0;
+        year = 0;
     }
-    
-        /**
-     * 
+
+    /**
+     * Permite introducir el dia, mes y año de una fecha.
      */
     public void IntroduceDate(int dia, int mes, int ano)
     {
         day = dia;
         month = mes;
         year = ano;
+        if (year <= 1999){
+            day = 0;
+            month = 0;
+            year = 0;
+            System.out.println("Introduce una fecha mayor a 2000");
+        }
+        if (year >= 2100){
+            day = 0;
+            month = 0;
+            year = 0;
+            System.out.println("Introduce una fecha menor a 2099");
+        }
     }
-    
-        /**
-     * 
+
+    /**
+     * Nos permite avanzar dia a dia en la fecha introducida.
      */
     public void moveDate()
     {
@@ -46,5 +61,5 @@ public class CalendarioBasico
             year = year + 1;
         }
     }
-    
+
 }
