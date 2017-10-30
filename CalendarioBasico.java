@@ -29,4 +29,22 @@ public class CalendarioBasico
         year = ano;
     }
     
+        /**
+     * 
+     */
+    public void moveDate()
+    {
+        if (day < 31){
+            day = day + 1;
+        }
+        if (day == 31){
+            day = 1;
+            month = month + 1;
+        }
+        if (month == 13){
+            month = 1;
+            year = year + 1;
+        }
+    }
+    
 }
