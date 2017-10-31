@@ -13,7 +13,7 @@ public class CalendarioBasico
     private int year;
 
     /**
-     * Constructor for objects of class CalendarioBasico
+     * Constructor para calendario basico.
      */
     public CalendarioBasico()
     {
@@ -25,7 +25,7 @@ public class CalendarioBasico
     /**
      * Permite introducir el dia, mes y año de una fecha.
      */
-    public void IntroduceDate(int dia, int mes, int ano)
+    public void introduceDate(int dia, int mes, int ano)
     {
         day = dia;
         month = mes;
@@ -34,7 +34,7 @@ public class CalendarioBasico
             day = 0;
             month = 0;
             year = 0;
-            System.out.println("Introduce una fecha mayor a 2000");
+            System.out.println("Introduce un fecha mayor a 2000");
         }
         if (year >= 2100){
             day = 0;
@@ -60,6 +60,23 @@ public class CalendarioBasico
             month = 1;
             year = year + 1;
         }
+    }
+    
+    /**
+     * Permite devolver una fecha.
+     */
+    public String getDate()
+    {
+        String dosCifrDia = String.valueOf(day);
+        String dosCifrMes = String.valueOf(month);
+        String dosCifrAño = String.valueOf(year);
+        if (dosCifrDia.length() < 2) {
+            dosCifrDia = "0" + String.valueOf(day);
+        }
+        if (dosCifrMes.length() < 2) {
+            dosCifrMes = "0" + String.valueOf(month);
+        }
+        return dosCifrDia + "-" + dosCifrMes + "-" + dosCifrAño.substring(2,4);
     }
 
 }
