@@ -17,9 +17,9 @@ public class CalendarioBasico
      */
     public CalendarioBasico()
     {
-        day = 0;
-        month = 0;
-        year = 0;
+        day = 1;
+        month = 1;
+        year = 1;
     }
     
     /**
@@ -30,18 +30,6 @@ public class CalendarioBasico
         day = dia;
         month = mes;
         year = ano;
-        if (year <= 1999){
-            day = 0;
-            month = 0;
-            year = 0;
-            System.out.println("Introduce un fecha mayor a 2000");
-        }
-        if (year >= 2100){
-            day = 0;
-            month = 0;
-            year = 0;
-            System.out.println("Introduce una fecha menor a 2099");
-        }
     }
 
     /**
@@ -69,14 +57,17 @@ public class CalendarioBasico
     {
         String dosCifrDia = String.valueOf(day);
         String dosCifrMes = String.valueOf(month);
-        String dosCifrAño = String.valueOf(year);
+        String dosCifrAno = String.valueOf(year);
         if (dosCifrDia.length() < 2) {
             dosCifrDia = "0" + String.valueOf(day);
         }
         if (dosCifrMes.length() < 2) {
             dosCifrMes = "0" + String.valueOf(month);
         }
-        return dosCifrDia + "-" + dosCifrMes + "-" + dosCifrAño.substring(2,4);
+        if (dosCifrAno.length() < 2) {
+            dosCifrAno = "0" + String.valueOf(year);
+        }
+        return dosCifrDia + "-" + dosCifrMes + "-" + dosCifrAno;
     }
        
 }
