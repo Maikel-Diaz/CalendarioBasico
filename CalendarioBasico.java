@@ -7,7 +7,7 @@
  */
 public class CalendarioBasico
 {
-    // instance variables - replace the example below with your own
+    // Declarando campos di
     private int day;
     private int month;
     private int year;
@@ -25,7 +25,7 @@ public class CalendarioBasico
     /**
      * Permite introducir el dia, mes y año de una fecha.
      */
-    public void introduceDate(int dia, int mes, int ano)
+    public void fijarFecha(int dia, int mes, int ano)
     {
         day = dia;
         month = mes;
@@ -47,7 +47,7 @@ public class CalendarioBasico
     /**
      * Nos permite avanzar dia a dia en la fecha introducida.
      */
-    public void moveDate()
+    public void avanzarFecha()
     {
         if (day < 31){
             day = day + 1;
@@ -65,7 +65,7 @@ public class CalendarioBasico
     /**
      * Permite devolver una fecha.
      */
-    public String getDate()
+    public String obtenerFecha()
     {
         String dosCifrDia = String.valueOf(day);
         String dosCifrMes = String.valueOf(month);
