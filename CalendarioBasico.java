@@ -21,7 +21,7 @@ public class CalendarioBasico
         month = 0;
         year = 0;
     }
-
+    
     /**
      * Permite introducir el dia, mes y año de una fecha.
      */
@@ -78,5 +78,5 @@ public class CalendarioBasico
         }
         return dosCifrDia + "-" + dosCifrMes + "-" + dosCifrAño.substring(2,4);
     }
-
+       
 }
